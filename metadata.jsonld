@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "dct:title": "Vyčištěná a geokódovaná datová sada evidovaných knihoven v ČR",
+  "dct:description": "Datová sada vznikla automatizovaným zpracováním, čištěním a geokódováním dat z Evidence knihoven, kterou spravuje Ministerstvo kultury ČR. Obsahuje informace o knihovnách, jejich zřizovatelích, adresách a typech, obohacené o přesné geografické souřadnice a propojení na registr ARES.",
+  "dct:publisher": {
+    "dct:type": "Agent",
+    "dct:name": "Ekonomicko-správní fakulta, Masarykova univerzita"
+  },
+  "dct:creator": "Radka Štěpanovská",
+  "dct:source": "https://www.mkcr.cz/evidence-knihoven-adresar-knihoven-evidovanych-ministerstvem-kultury-a-souvisejici-informace-cs-341",
+  "dct:language": "cs",
+  "dct:issued": "2025-08-07",
+  "dct:modified": "2025-08-07",
+  "dct:spatial": {
+    "dct:type": "Location",
+    "dct:title": "Česká republika",
+    "dcat:bbox": "12.09,48.55,18.86,51.06"
+  },
+  "dcat:keyword": [
+    "knihovny",
+    "kultura",
+    "geodata",
+    "otevřená data",
+    "registr"
+  ],
+  "dcat:distribution": [
+    {
+      "dcat:accessURL": {
+        "@value": "Datová sada není veřejně přístupná online.",
+        "@language": "cs"
+      },
+      "dcat:mediaType": "text/csv",
+      "dct:format": "CSV",
+      "dct:title": {
+        "@value": "Interní přístup k datové sadě ve formátu CSV",
+        "@language": "cs"
+      }
+    },
+    {
+      "dcat:accessURL": "https://api.esf.muni.cz/knihovny",
+      "dcat:mediaType": "application/json",
+      "dct:format": "API",
+      "dct:title": {
+        "@value": "Přístup k datové sadě přes API (hypotetické)",
+        "@language": "cs"
+      },
+      "dct:license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

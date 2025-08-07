@@ -1,0 +1,27 @@
+import requests
+import os
+from datetime import datetime
+
+# Nastavení URL souboru
+url = "https://www.mkcr.cz/assets/knihovny/Evidence-knihoven/Adresar_knihoven.xlsx"
+
+# Vytvoření cesty pro uložení souboru s datem
+today = datetime.today().strftime("%Y-%m-%d")
+folder_path = "data/raw"
+filename = f"knihovny_{today}.xlsx"
+full_path = os.path.join(folder_path, filename)
+
+# Zajištění, že složka existuje
+os.makedirs(folder_path, exist_ok=True)
+
+# Stažení dat
+print("Stahuji data...")
+response = requests.get(url)
+
+# Kontrola odpovědi
+if response.status_code == 200:
+    with open(full_path, "wb") as f:
+        f.write(response.content)
+    print(f"Soubor byl úspěšně uložen jako {full_path}")
+else:
+    print(f"Chyba při stahování. Status code: {response.status_code}")
